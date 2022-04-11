@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import Login from '../views/Login.vue';
 import Home from '../views/Home.vue';
+import AllTasks from "../views/AllTasks.vue";
 
 const routes = [
     {
@@ -12,6 +13,11 @@ const routes = [
     {
         path: '/login',
         component: Login,
+        meta: { title: '登录' }
+    },
+    {
+        path: '/allTasks',
+        component: AllTasks,
         meta: { title: '登录' }
     }
 ];
