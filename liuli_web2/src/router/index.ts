@@ -1,19 +1,11 @@
-import { createRouter, createWebHistory } from 'vue-router';
-
-import Login from '../views/Login.vue';
-import Home from '../views/Home.vue';
-import AllTasks from "../views/AllTasks.vue";
-import EditTask from "../views/EditTask.vue";
+import {createRouter, createWebHistory} from 'vue-router';
+import EditTask from "../components/EditTask";
+import AllTasks from "../components/AllTasks";
+import Login from "../components/Login";
 
 const router = createRouter({
-    // history: createWebHashHistory(),
     history: createWebHistory('/'),
     routes: [
-        {
-            path: '/',
-            component: Home,
-            meta: {title: '首页'}
-        },
         {
             path: '/login',
             component: Login,

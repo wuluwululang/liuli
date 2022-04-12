@@ -1,22 +1,5 @@
 <template>
-  <main>
-    <article class="grid">
-      <ol>
-        <li v-for="(item, i) in allTasks" class="task-item">
-          <div style="display: flex;">
-            {{ item.id }}
-            {{ item.description }}
-          </div>
-          <div style="display: flex;align-items: center;">
-            {{ getTimeUntilNow(item.lastUpdated) }}
-            <button style="width: 100px;margin: unset;margin-left: 8px;padding:4px">执行</button>
-            <div/>
-            <button style="width: 100px;margin: unset;padding:4px">编辑</button>
-          </div>
-        </li>
-      </ol>
-    </article>
-  </main>
+
 </template>
 
 <script lang="ts">
@@ -51,9 +34,9 @@ export default {
         return `${minutes} 分钟前 `;
       }
       return "刚刚 ";
-    }
-  },
+    },
 
+  },
 };
 
 
@@ -61,11 +44,8 @@ export default {
 
 <style>
 main.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: calc(100vh);
-  padding: 1rem 0;
+
+  /*padding: 1rem 0;*/
 }
 
 article {
@@ -74,9 +54,7 @@ article {
 }
 
 li.task-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
 }
 
 article div {
